@@ -1,0 +1,18 @@
+version: 0.2
+
+phases: 
+  install: 
+     commands:
+        - echo "instalar alguma coisa" 
+  pre_build:
+     commands:
+        - echo "fase pre-build"  
+  build:
+     commands:
+        - echo "fase build"
+        - echo "iniciando o test"
+        - grep -Fq "Congratulations" index.html   
+  post_build:
+     commands:
+        - echo "fase Post-build" 
+ 
